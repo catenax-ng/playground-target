@@ -1,5 +1,11 @@
 name: Demo
-
+on: 
+  workflow_dispatch:
+    inputs:
+      example:
+        description: "content here"
+        required: true
+        default: "no content"
 jobs:
   show_workspace:
     runs-on: ubuntu-latest
