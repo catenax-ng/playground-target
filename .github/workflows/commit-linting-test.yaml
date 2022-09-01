@@ -1,10 +1,7 @@
 name: linting test
 
 on: 
-  workflow_dispatch:
-    inputs:
-      example:
-        description: "content here"
+  pull_request:
 
 jobs:
   test-deploy:
@@ -17,7 +14,5 @@ jobs:
           node-version: 16.x
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-      - name: Lint
+      - name: Lint commit message
         run: npx commitlint --from HEAD~1 --to HEAD --verbose
