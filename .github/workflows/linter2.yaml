@@ -24,4 +24,4 @@ jobs:
       - name: check director
         run: ls -la
       - name: Lint commit message
-        run: npm run commitlint --from HEAD~1 --verbose
+        run: npm run lint --from HEAD~1 --verbose
