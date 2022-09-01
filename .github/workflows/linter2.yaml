@@ -1,11 +1,7 @@
 name: linting test without PR
 
 on: 
-  workflow_dispatch:
-   inputs:
-      example:
-        description: "content here"
-        required: true
+  pull_request:
 
 jobs:
   test-deploy:
