@@ -20,7 +20,7 @@ jobs:
           node-version: 16.x
           cache: npm
       - name: install commitlint
-        run: npm install --save-dev @commitlint/travis-cli
+        run: npm install --save-dev @commitlint/{cli,config-conventional}
       - name: configure commitlint to use conventional config
         run: echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
       - name: Lint commit message
