@@ -22,6 +22,6 @@ jobs:
       - name: install commitlint
         run: npm install --save-dev @commitlint/travis-cli
       - name: configure commitlint to use conventional config
-        run: echo 'module.exports = { extends: ['@commitlint/config-conventional'] };' > commitlint.config.js
+        run: echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
       - name: Lint commit message
         run: npm run commitlint --from HEAD~1 --verbose
